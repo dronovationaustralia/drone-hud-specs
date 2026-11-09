@@ -1,0 +1,107 @@
+- !<AssetImportMetadata/1c193235-8b51-499e-83ab-ea565c160d35>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 34eaef44-d56f-4480-8c66-ea424e01dd63
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 34eaef44-d56f-4480-8c66-ea424e01dd63
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 20c17f61-fd59-4a98-80bd-2f4bafee3562
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/20c17f61-fd59-4a98-80bd-2f4bafee3562>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: d7a45f28-17d5-4761-a6a8-cb2af963f47c
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    arcHalfAngleDeg: false
+    arcRadiusCm: false
+    contentRoot: false
+    cruiseAltitudeCm: false
+    debugTimeScale: false
+    drainSeconds: false
+    drone: false
+    droneAudio: false
+    eyeHeightCm: false
+    flightTag: false
+    homePad: false
+    offViewArrow: false
+    placeContentAtStart: false
+    preflightCard: false
+    returnBatteryPercent: false
+    returnLine: false
+    viewer: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - preflightCard: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      flightTag: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      returnLine: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+      offViewArrow: !<MappingBased.AssignableType_4> 00000000-0000-0000-0000-000000000000
+      drone: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      homePad: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      contentRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      viewer: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      droneAudio: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      drainSeconds: !<float> 40.000000
+      returnBatteryPercent: !<float> 30.000000
+      cruiseAltitudeCm: !<float> 175.000000
+      arcRadiusCm: !<float> 300.000000
+      arcHalfAngleDeg: !<float> 18.000000
+      eyeHeightCm: !<float> 165.000000
+      debugTimeScale: !<float> 1.000000
+      placeContentAtStart: true
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">DroneHUDController – drone flight overlay orchestrator</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">References</span>"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input AssignableType_1 preflightCard {"hint":"Pre-flight card UI (Start flight button + battery)."}'
+    - '// @input AssignableType_2 flightTag {"hint":"Billboarded flight tag beside the drone."}'
+    - '// @input AssignableType_3 returnLine {"hint":"Amber return line from drone to home pad."}'
+    - '// @input AssignableType_4 offViewArrow {"hint":"Off-view edge arrow."}'
+    - '// @input SceneObject drone {"hint":"Stand-in drone root (moved along the scripted path)."}'
+    - '// @input SceneObject homePad {"hint":"Home pad root (origin = pad centre on the floor). The drone takes off from and lands on it."}'
+    - '// @input SceneObject contentRoot {"hint":"Root of all world content. Placed on the floor in front of the user at Lens start."}'
+    - "// @input SceneObject viewer {\"hint\":\"The user's camera object.\"}"
+    - "// @input Component.AudioComponent droneAudio {\"hint\":\"AudioComponent on the drone that plays the return chime (spatial, from the drone's position).\"}"
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Settings</span>"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float drainSeconds = 40 {"hint":"Seconds from takeoff until the battery drains from 100% to the return threshold.", "widget":"slider", "min":10, "max":120, "step":1}'
+    - '// @input float returnBatteryPercent = 30 {"hint":"Battery % at which the drone returns home (tag turns amber, line + chime).", "widget":"slider", "min":10, "max":60, "step":1}'
+    - '// @input float cruiseAltitudeCm = 175 {"hint":"Cruise height above the floor in cm (about head height).", "widget":"slider", "min":100, "max":300, "step":5}'
+    - '// @input float arcRadiusCm = 300 {"hint":"Mean distance of the arc from the user in cm (stays roughly 2-4 m away).", "widget":"slider", "min":200, "max":400, "step":5}'
+    - '// @input float arcHalfAngleDeg = 15 {"hint":"How far the arc swings either side of straight ahead, in degrees.", "widget":"slider", "min":5, "max":30, "step":1}'
+    - '// @input float eyeHeightCm = 165 {"hint":"User eye height in cm, used to find the floor when placing content at Lens start.", "widget":"slider", "min":120, "max":200, "step":1}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Debug</span>"}'
+    - '// @ui {"widget":"group_start", "label":"Debug"}'
+    - '// @input float debugTimeScale = 1 {"hint":"Simulation speed multiplier for testing only (1 = real time). Not exposed in the HUD.", "widget":"slider", "min":0.25, "max":10, "step":0.25}'
+    - "// @input bool placeContentAtStart = true {\"hint\":\"Place ContentRoot relative to the user's head at Lens start (off = keep authored placement).\"}"
+    - '// @ui {"widget":"group_end"}'

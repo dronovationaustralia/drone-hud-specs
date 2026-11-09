@@ -1,0 +1,76 @@
+- !<AssetImportMetadata/39efb2f3-aaaf-443a-abce-f725d98c8442>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 2674c1c2-d5f9-486d-9aa5-0d020833493a
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 2674c1c2-d5f9-486d-9aa5-0d020833493a
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> bfada7db-0654-4ae6-844e-24b2658a13bd
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/bfada7db-0654-4ae6-844e-24b2658a13bd>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: cf7bcec1-260a-4950-bfb9-cb0f40e533c3
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    droneHalfWidthCm: false
+    gapFromDroneCm: false
+    landedText: false
+    letterHeightCm: false
+    normalColor: false
+    target: false
+    viewer: false
+    warningColor: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - target: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      viewer: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      letterHeightCm: !<float> 8.000000
+      gapFromDroneCm: !<float> 20.000000
+      droneHalfWidthCm: 17.500000
+      normalColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 0.750000}
+      warningColor: !<Vec4> {x: 1.000000, y: 0.690000, z: 0.100000, w: 1.000000}
+      landedText: Landed
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">DroneHUDFlightTagUI – billboarded H / D / battery tag beside the drone</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">References</span>"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input SceneObject target {"hint":"The drone the tag follows."}'
+    - "// @input SceneObject viewer {\"hint\":\"The user's camera — the tag turns to face it and sits to its right of the drone.\"}"
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Settings</span>"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float letterHeightCm = 6 {"hint":"Letter height in cm (font em height; capitals are ~70% of this). Brief suggested ~8 cm; 6 cm keeps the whole line inside the ~32 deg view at 3 m.", "widget":"slider", "min":2, "max":15, "step":0.5}'
+    - "// @input float gapFromDroneCm = 6 {\"hint\":\"Gap between the drone's right side and the start of the text, in cm (text starts ~23 cm from the drone centre by default).\", \"widget\":\"slider\", \"min\":0, \"max\":60, \"step\":1}"
+    - "// @input float droneHalfWidthCm = 17.5 {\"hint\":\"Half the drone's width in cm, so the gap is measured from its side.\", \"widget\":\"slider\", \"min\":0, \"max\":40, \"step\":0.5}"
+    - '// @input vec4 normalColor = "{1,1,1,0.75}" {"hint":"Normal tag colour: white, slightly transparent.", "widget":"color"}'
+    - '// @input vec4 warningColor = "{1,0.69,0.1,1}" {"hint":"Warning colour at and below the return threshold: solid amber.", "widget":"color"}'
+    - '// @input string landedText = "Landed" {"hint":"Text shown on touchdown."}'
+    - '// @ui {"widget":"group_end"}'

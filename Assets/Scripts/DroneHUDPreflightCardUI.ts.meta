@@ -1,0 +1,66 @@
+- !<AssetImportMetadata/0d81f6bd-f0e5-4df6-9d62-6875d3f347b4>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 75558eec-3843-4522-842a-a91f9d4f1de9
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 75558eec-3843-4522-842a-a91f9d4f1de9
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 62299580-795b-42ae-b560-03d8f3c418ee
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/62299580-795b-42ae-b560-03d8f3c418ee>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 8e341d53-18a5-4941-99c5-72fd5577bb5d
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    buttonLabel: false
+    panelWidthCm: false
+    startButtonOutlineCm: false
+    startPillSizeCm: false
+    textColor: false
+    viewingDistanceCm: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - viewingDistanceCm: !<float> 190.000000
+      panelWidthCm: !<float> 34.000000
+      buttonLabel: Start flight
+      startPillSizeCm: !<Vec2> {x: 18.000000, y: 7.000000}
+      startButtonOutlineCm: 0.300000
+      textColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">DroneHUDPreflightCardUI – pre-flight card with Start flight button</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Settings</span>"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float viewingDistanceCm = 190 {"hint":"Viewing distance (cm) the text is sized for. The card sits ~1.9 m from the user, so text scales up from the 110 cm baseline.", "widget":"slider", "min":80, "max":300, "step":5}'
+    - '// @input float panelWidthCm = 34 {"hint":"Card width in cm.", "widget":"slider", "min":20, "max":60, "step":1}'
+    - '// @input string buttonLabel = "Start flight" {"hint":"Label on the big start button."}'
+    - '// @input vec2 startPillSizeCm = {18,7} {"hint":"Start button pill size (width, height) in cm. Big target, easy to pinch."}'
+    - '// @input float startButtonOutlineCm = 0.5 {"hint":"Start button outline thickness in cm (thicker on hover/press).", "widget":"slider", "min":0.1, "max":1, "step":0.05}'
+    - '// @input vec4 textColor = "{1,1,1,1}" {"hint":"Text colour (keep light — the display is additive, dark colours disappear).", "widget":"color"}'
+    - '// @ui {"widget":"group_end"}'
